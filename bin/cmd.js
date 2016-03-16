@@ -28,8 +28,13 @@ var files = argv._.map(function (file) {
 
 var md = '';
 files.forEach(function (file) {
-  var data = fs.readFileSync(file, 'utf8');
-  md += styleDocDown.parse(data);
+  var data = fs.readFileSync(file, 'utf8'),
+    temp = styleDocDown.sync(data);
+  if (temp instanceof Error) {
+    throw temp;
+  } else {
+    md += temp;
+  }
 });
 
 process.stdout.write(md);
