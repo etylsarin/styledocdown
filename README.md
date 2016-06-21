@@ -3,9 +3,26 @@
 
 > Parse style-doc comment tags and output as a markdown document
 
+```css
+/**
+* @name Panels
+* @summary Panel creates a simple box which visualy separates its content from other blocks.
+* @description ../../docs/styleguide/_panels.md
+* @example ../../docs/snippets/_panels.html
+* @tutorial ../../docs/snippets/_panels.html
+*/
+
+.panel {
+	padding: 15px;
+	margin-bottom: 10px;
+	background: #fff;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+}
+```
+
 ## Usage
 
-Add [styledocdown] to your build tool:
+Add styledocdown to your build tool:
 
 ```bash
 npm install styledocdown --save-dev
