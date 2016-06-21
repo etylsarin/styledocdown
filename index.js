@@ -2,13 +2,19 @@ var docparse = require('./lib/docparse'),
 docdown = require('./lib/docdown');
 
 function sync (text, options) {
+    var markdown;
     text = typeof text === 'string' ? text : null;
     options = typeof options === 'object' ? options : {};
     options.root = options.root || process.cwd();
     options.fileName = options.fileName || 'style.css';
 
     if (text) {
-        return docdown(docparse(text), options);
+        markdown = docdown(docparse(text), options);
+        if (markdown) {
+            return markdown;
+        } else {
+            return null;
+        }
     } else {
         return new Error('styledocdown: First arg must be a string.');
     }

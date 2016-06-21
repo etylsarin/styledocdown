@@ -1,6 +1,6 @@
 {
   "name": "styledocdown",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Parse style-doc comment tags and output a markdown document",
   "main": "index.js",
   "bin": {
