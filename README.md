@@ -36,7 +36,7 @@ require('styledocdown').process(YOUR_CSS, { /* options */ });
 
 #### Gulp
 
-Use existing [gulp-styledocdown](https://github.cometylsarin/gulp-styledocdown) plugin.
+Use existing [gulp-styledocdown](https://github.com/etylsarin/gulp-styledocdown) plugin.
 
 ## Options
 
